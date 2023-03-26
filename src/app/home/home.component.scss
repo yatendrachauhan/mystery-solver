@@ -1,0 +1,49 @@
+:host {
+    .container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+
+        .items {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFF;
+            transition: 1s ease;
+            cursor: pointer;
+            text-align: center;
+            background-position: center;
+            background-size: cover;
+            flex-direction: column;
+            padding: 70px 0;
+
+            &:first-child {
+                // background-color: rgb(178, 66, 66);
+                background-image: url(../../assets/images/home-theme-2.jpg);
+            }
+
+            &:last-child {
+                // background-color: #cfcf46;
+                background-image: url(../../assets/images/happiness-3.jpg);
+            }
+
+            &:nth-child(2) {
+                // background-color: rgb(0, 200, 200);
+                background-image: url(../../assets/images/health-2.jpg);
+                color: #000;
+            }
+
+            &:hover {
+                box-shadow: rgb(178, 66, 66);
+                -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
+                transition: 1s ease;
+            }
+        }
+    }
+}

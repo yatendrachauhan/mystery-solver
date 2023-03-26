@@ -1,0 +1,22 @@
+:host {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../../assets/images/health.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .omni-calculator-header, .omni-calculator {
+            background-color: rgb(0, 200, 200) !important;
+            color: #FFF;
+        }
+
+        ::ng-deep {
+            .p-button {
+                margin-top: 440px;
+                margin-left: 30px;
+            }
+        }
+    }
+}

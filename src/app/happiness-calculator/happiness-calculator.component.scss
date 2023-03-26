@@ -1,0 +1,22 @@
+:host {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../../assets/images/happiness.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .omni-calculator-header, .omni-calculator {
+            background-color: #cfcf46 !important;
+            color: #FFF;
+        }
+
+        ::ng-deep {
+            .p-button {
+                margin-top: 510px;
+                margin-left: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+<!-- <div class="page-container">
+    <p-card header="Time Since Death" [style]="{ width: '420px' }">
+        <form>
+            <div class="field-container">
+                <span class="p-float-label">
+                    <input pInputText id="username" />
+                    <label htmlFor="username">Body Temperature</label>
+                </span>
+                <span>
+                    <p-dropdown [options]="cities" optionLabel="name"></p-dropdown>
+                </span>
+            </div>
+
+            <div class="p-float-label field-container">
+                <input pInputText id="username" />
+                <label htmlFor="username">Ambient Temperature</label>
+            </div>
+
+            <div class="p-float-label field-container">
+                <input pInputText id="username" />
+                <label htmlFor="username">Time Since Death</label>
+            </div>
+        </form>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary"
+                [style]="{ 'margin-left': '.5em' }"></p-button>
+        </ng-template>
+    </p-card>
+</div> -->
+
+<div class="container">
+    <div class="row">Please select one of the below.</div>
+    <div class="row">
+        <div class="col" (click)="loadQuestions('/death-calculator')">Police Officer</div>
+        <div class="col" (click)="loadQuestions('/forensic-calculator')">Forensic Expert</div>
+    </div>
+</div>

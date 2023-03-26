@@ -1,0 +1,35 @@
+<div class="container">
+    <p-card header="Questions" subheader="">
+        <div class="questions" [class.active]="questions === 1">
+            <p>
+                Kindly provide the body temperature
+            </p>
+            <div class="p-float-label field-container">
+                <input pInputText id="username" />
+                <label htmlFor="username">Ambient Temperature</label>
+            </div>
+        </div>
+        <div class="questions" [class.active]="questions === 2">
+            <p>
+                Kindly provide the Ambient temperature
+            </p>
+            <div class="p-float-label field-container">
+                <input pInputText id="username" />
+                <label htmlFor="username">Ambient Temperature</label>
+            </div>
+        </div>
+        <div class="questions" [class.active]="questions === 3">
+            <p>
+                Kindly provide the Time Since Death
+            </p>
+            <div class="p-float-label field-container">
+                <input pInputText id="username" />
+                <label htmlFor="username">Ambient Temperature</label>
+            </div>
+        </div>
+        <ng-template pTemplate="footer">
+            <p-button label="Next" icon="pi pi-chevron-right" (click)="nextQuestion()" *ngIf="questions < totalQuestions"></p-button>
+            <p-button label="Submit" *ngIf="questions === totalQuestions"></p-button>
+        </ng-template>
+    </p-card>
+</div>

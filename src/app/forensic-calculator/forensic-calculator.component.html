@@ -1,0 +1,52 @@
+<div class="page-container">
+    <p-card header="Time Since Death" [style]="{ width: '600px' }">
+        <form [formGroup]="deathForm">
+            <div class="field-container">
+                <span class="p-float-label">
+                    <input pInputText id="cysteine" type="number" formControlName="Cysteine" class="p-invalid"
+                        required />
+                    <label htmlFor="cysteine">Cysteine</label>
+                </span>
+                <p *ngIf="deathForm.controls['Cysteine'].touched || deathForm.controls['Cysteine'].dirty"
+                    class="error-message">
+                    <span
+                        *ngIf="deathForm.controls['Cysteine'].errors && deathForm.controls['Cysteine'].errors['required']">
+                        Cysteine is required
+                    </span>
+                </p>
+            </div>
+
+            <div class="p-float-label field-container">
+                <span class="p-float-label">
+                    <input pInputText id="protein" type="number" formControlName="PROTEIN" />
+                    <label htmlFor="protein">Protein</label>
+                </span>
+                <p *ngIf="deathForm.controls['PROTEIN'].touched || deathForm.controls['PROTEIN'].dirty"
+                    class="error-message">
+                    <span
+                        *ngIf="deathForm.controls['PROTEIN'].errors && deathForm.controls['PROTEIN'].errors['required']">
+                        Protein is required
+                    </span>
+                </p>
+            </div>
+
+            <div class="p-float-label field-container">
+                <span class="p-float-label">
+                    <input pInputText id="tryptophan" type="number" formControlName="Tryptophan" />
+                    <label htmlFor="tryptophan">Tryptophan</label>
+                </span>
+                <p *ngIf="deathForm.controls['Tryptophan'].touched || deathForm.controls['Tryptophan'].dirty"
+                    class="error-message">
+                    <span
+                        *ngIf="deathForm.controls['Tryptophan'].errors && deathForm.controls['Tryptophan'].errors['required']">
+                        Tryptophan is required
+                    </span>
+                </p>
+            </div>
+        </form>
+        <!-- <p>Time Since Death: 123 days</p> -->
+        <ng-template pTemplate="footer">
+            <p-button label="Submit" type="submit" (click)="deathFormSubmit()" [disabled]="!deathForm.valid"></p-button>
+        </ng-template>
+    </p-card>
+</div>

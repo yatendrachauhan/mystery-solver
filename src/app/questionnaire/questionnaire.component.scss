@@ -1,0 +1,48 @@
+:host {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        ::ng-deep {
+            .p-card {
+                width: 80vw;
+                height: 80vh;
+
+                .p-card-body {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+
+                    .p-card-title {
+                        flex: 1;
+                    }
+
+                    .p-card-content {
+                        flex: 4;
+                        position: relative;
+
+                        .questions {
+                            display: none;
+                            // width: 0;
+                            // overflow: hidden;
+                            // position: absolute;
+
+                            &.active {
+                                display: block;
+                                // width: 100%;
+                                // transition: width ease 2s;
+                            }
+                        }
+                    }
+
+                    .p-card-footer {
+                        flex: 1;
+                        text-align: end;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+:host {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../../assets/images/stress.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        min-height: 100vh;
+
+        .omni-calculator-header, .omni-calculator {
+            background-color: #cfcf46 !important;
+            color: #FFF;
+        }
+
+        ::ng-deep {
+            .p-button {
+                margin-top: 210px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
