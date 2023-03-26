@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
+## Setup code
+First checkout from the git repo. Then install dependencies using following command:
+
+npm install
+
+Install primeng library
+
+npm install primeng primeicons
+
+Then follow the next step.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
