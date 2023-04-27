@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -39,8 +39,28 @@ export class ForensicCalculatorComponent implements OnInit {
 
     console.log(requestParams);
 
-    // this.httpClient.post('https://model.h2o.web.att.com/9be23d79-5cf7-4ae8-b98c-e66d831c3961/model/score', requestParams).subscribe(result => {
-    //   console.log(result);
-    // });
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer dapi356b023b754c57ec9dbcee96cb3a719f-2`,
+      'Access-Control-Allow-Headers': '*'
+    });
+
+    const requestOptions = { headers: headers };
+
+    this.httpClient.post(
+      'https://adb-3175252654970232.12.azuredatabricks.net/model/Time-since-death-model/1/invocations?Token=Bearerdapi356b023b754c57ec9dbcee96cb3a719f-2',
+      {
+        "dataframe_records": [
+          {
+            "Cysteine": 5.1,
+            "PROTEIN": 3.5,
+            "Tryptophan": 1.4
+          }
+        ]
+      },
+      requestOptions
+    ).subscribe(result => {
+      console.log(result);
+    });
   }
 }
